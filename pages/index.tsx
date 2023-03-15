@@ -82,18 +82,11 @@ const IndexPage: NextPage<Props> = ({ ssr }) => {
             css={{ mx: 'auto', maxWidth: 728, pt: '$5', textAlign: 'center' }}
           >
             <Text style="h3" css={{ mb: 24 }}>
-              Open Source Marketplace
+              freshdrops
             </Text>
             <Text style="body1" css={{ mb: 48 }}>
-              Reservoir Marketplace is an open-source project that showcases the
-              latest and greatest features of the Reservoir Platform.
+              freshdrops is the original, fastest, and most accurate NFT metadata reveal tool
             </Text>
-            <a
-              href="https://github.com/reservoirprotocol/marketplace-v2"
-              target="_blank"
-            >
-              <Button color="gray3">View Source Code</Button>
-            </a>
           </Flex>
         )}
         <Flex css={{ my: '$6', gap: 65 }} direction="column">

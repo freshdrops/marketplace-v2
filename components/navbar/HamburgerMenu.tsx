@@ -71,7 +71,7 @@ const HamburgerMenu = () => {
                 src="/freshdrops-logo-black.svg"
                 width={34}
                 height={39}
-                alt="Reservoir"
+                alt="freshdrops"
               />
             </Box>
           </Link>
@@ -242,19 +242,6 @@ const HamburgerMenu = () => {
                   Portfolio
                 </Text>
               </Link>
-              <Anchor
-                href="https://docs.reservoir.tools/docs"
-                target="_blank"
-                css={{
-                  borderBottom: '1px solid $gray4',
-                  cursor: 'pointer',
-                  pb: '$4',
-                  pt: '24px',
-                  width: '100%',
-                }}
-              >
-                <Text style="subtitle1">Docs</Text>
-              </Anchor>
             </Flex>
             <Box>
               <ConnectWalletButton />
@@ -271,7 +258,7 @@ const HamburgerMenu = () => {
             borderTop: '1px solid $gray4',
           }}
         >
-          <a href="https://twitter.com/reservoir0x" target="_blank">
+          <a href="https://twitter.com/freshdrops_app" target="_blank">
             <Button
               css={{ justifyContent: 'center', width: '44px', height: '44px' }}
               type="button"

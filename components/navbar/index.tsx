@@ -64,7 +64,7 @@ const Navbar = () => {
                 src="/freshdrops-logo-black.svg"
                 width={34}
                 height={39}
-                alt="Reservoir"
+                alt="freshdrops"
               />
             </Box>
           </Link>
@@ -104,14 +104,14 @@ const Navbar = () => {
                   src="/freshdrops-logo-pink.svg"
                   width={112}
                   height={36}
-                  alt="Reservoir"
+                  alt="freshdrops"
                 />
               ) : (
                 <Image
                   src="/freshdrops-logo-black.svg"
                   width={112}
                   height={36}
-                  alt="Reservoir"
+                  alt="freshdrops"
                 />
               )}
             </Box>
@@ -132,9 +132,6 @@ const Navbar = () => {
             </Link>
             <Link href="/portfolio">
               <NavItem active={router.pathname == '/portfolio'}>Sell</NavItem>
-            </Link>
-            <Link href="https://docs.reservoir.tools/docs">
-              <NavItem active={false}>Docs</NavItem>
             </Link>
           </Flex>
         </Flex>

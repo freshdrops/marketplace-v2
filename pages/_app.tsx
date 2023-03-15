@@ -51,7 +51,7 @@ const { chains, provider } = configureChains(supportedChains, [
 ])
 
 const { connectors } = getDefaultClient({
-  appName: 'Reservoir Marketplace',
+  appName: 'freshdrops Marketplace',
   chains,
 })
 
