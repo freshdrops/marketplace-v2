@@ -21,7 +21,7 @@ const NavItem = forwardRef<
       },
     }}
     as="p"
-    style="subtitle1"
+    style="subtitle2"
   >
     {children}
   </Text>

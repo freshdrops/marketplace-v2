@@ -13,7 +13,7 @@ const ThemeSwitcher = () => {
         type="button"
         onClick={() => (theme == 'dark' ? setTheme('light') : setTheme('dark'))}
         size="small"
-        color="gray3"
+        color="ghost"
       >
         {theme == 'dark' ? (
           <FontAwesomeIcon icon={faMoon} width={16} height={16} />

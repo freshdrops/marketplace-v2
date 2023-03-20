@@ -51,7 +51,7 @@ const CollectionItem: FC<Props> = ({ collection, handleSelectResult }) => {
             src={collection.image}
             style={{ width: 32, height: 32, borderRadius: 4 }}
           />
-          <Text style="subtitle1" ellipsify>
+          <Text style="subtitle2" ellipsify>
             {collection.name}
           </Text>
           <OpenSeaVerified

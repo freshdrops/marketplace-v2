@@ -22,7 +22,7 @@ const CartButton = () => {
             position: 'relative',
           }}
           size="small"
-          color="gray3"
+          color="ghost"
         >
           <FontAwesomeIcon icon={faShoppingCart} width="16" height="16" />
           {cartItems.length > 0 && (
