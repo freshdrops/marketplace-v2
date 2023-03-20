@@ -22,8 +22,9 @@ export const ConnectWalletButton: FC<Props> = () => {
                 return (
                   <Button
                     css={{ flex: 1, justifyContent: 'center' }}
-                    corners="rounded"
+                    corners="square"
                     onClick={show}
+                    color="ghost"
                     type="button"
                   >
                     Connect Wallet
