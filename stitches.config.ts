@@ -18,10 +18,20 @@ import {
 import { createStitches } from '@stitches/react'
 import type * as Stitches from '@stitches/react'
 import { reset } from 'utils/css/reset'
-import { Inter } from '@next/font/google'
+import { IBM_Plex_Mono, Inter, Roboto_Mono } from '@next/font/google'
 
 const inter = Inter({
   subsets: ['latin'],
+})
+
+const ibmplexmono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: "400"
+})
+
+const robotomono = Roboto_Mono({
+  subsets: ['latin'],
+  weight: '400'
 })
 
 // CONFIGURABLE: Here you can update all your theming (outside of ReservoirKit which can be configured in the app.tsx)
@@ -119,7 +129,7 @@ export const { createTheme, keyframes, styled, globalCss, getCssText } =
       fontSizes: {},
       fontWeights: {},
       fonts: {
-        body: inter.style.fontFamily,
+        body: robotomono.style.fontFamily,
         button: '$body',
       },
       lineHeights: {},
