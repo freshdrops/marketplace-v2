@@ -3,7 +3,8 @@ import { styled } from 'stitches.config'
 const Button = styled('button', {
   outline: 'none',
   fontWeight: 700,
-  fontSize: 14,
+  fontSize: 16,
+  whiteSpace: 'nowrap',
   fontFamily: '$button',
   transition: 'background-color 250ms linear',
   gap: '$space$2',
@@ -54,6 +55,14 @@ const Button = styled('button', {
       },
       ghost: {
         backgroundColor: 'transparent',
+        p: 0,
+        '&:hover': {
+          color: '$primary9',
+        },
+      },
+      ghost1: {
+        backgroundColor: 'transparent',
+        color: '$primary6', 
         p: 0,
         '&:hover': {
           color: '$primary9',

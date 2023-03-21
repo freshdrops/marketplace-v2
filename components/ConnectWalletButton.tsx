@@ -21,13 +21,17 @@ export const ConnectWalletButton: FC<Props> = () => {
               if (!isConnected || !chain) {
                 return (
                   <Button
-                    css={{ flex: 1, justifyContent: 'center' }}
+                    css={{ 
+                      flex: 1, 
+                      justifyContent: 'center',
+                      textShadow: '0px 0px 10px #ffb3cc' 
+                    }}
                     corners="square"
                     onClick={show}
-                    color="ghost"
+                    color="ghost1"
                     type="button"
                   >
-                    Connect Wallet
+                    CONNECT WALLET
                   </Button>
                 )
               }
