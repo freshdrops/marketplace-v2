@@ -30,16 +30,19 @@ export const ProfileDropdown: FC = () => {
   const trigger = (
     <Button
       css={{
-        justifyContent: 'center',
+        justifyContent: 'center', margin: 10 
       }}
-      corners="circle"
       type="button"
-      color="gray3"
+      color="ghost1"
     >
       {ensAvatar ? (
-        <Avatar size="medium" src={ensAvatar} />
+        <Avatar size="small" src={ensAvatar} css={{ color: '#CE01A5'}} />
       ) : (
-        <Jazzicon diameter={44} seed={jsNumberForAddress(address as string)} />
+        <div>
+          <Text style="body1" css={{ color: '#CE01A5'}}>
+              {shortEnsName ? shortEnsName : shortAddress}
+          </Text>
+        </div>
       )}
     </Button>
   )

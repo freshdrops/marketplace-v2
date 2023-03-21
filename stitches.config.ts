@@ -59,14 +59,14 @@ export const { createTheme, keyframes, styled, globalCss, getCssText } =
         //Aliases
 
         //Primary
-        primary1: '$plum1',
-        primary2: '$plum2',
-        primary3: '$plum3',
-        primary4: '$plum4',
-        primary5: '$plum5',
-        primary6: '$plum6',
-        primary7: '$plum7',
-        primary8: '$plum8',
+        primary1: '#FAE6F6',
+        primary2: '#F5CCED',
+        primary3: '#EB99DB',
+        primary4: '#E267C9',
+        primary5: '#D834B7',
+        primary6: '#CE01A5',
+        primary7: '#A50184',
+        primary8: '#7c0163',
         primary9: '$plum9',
         primary10: '$plum10',
         primary11: '$plum11',
