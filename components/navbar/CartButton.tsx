@@ -4,6 +4,8 @@ import { useModal } from 'connectkit'
 import { CartPopover, useCart } from '@reservoir0x/reservoir-kit-ui'
 import { Flex, Button, Text } from 'components/primitives'
 
+
+
 const CartButton = () => {
   const { data: cartItems } = useCart((cart) => cart.items)
   const { setOpen } = useModal()
@@ -51,3 +53,4 @@ const CartButton = () => {
 }
 
 export default CartButton
+

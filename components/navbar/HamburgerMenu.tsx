@@ -41,7 +41,7 @@ const HamburgerMenu = () => {
       css={{ justifyContent: 'center', width: '44px', height: '44px' }}
       type="button"
       size="small"
-      color="gray3"
+      color="ghost"
     >
       <FontAwesomeIcon icon={faBars} width={16} height={16} />
     </Button>

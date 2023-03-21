@@ -26,7 +26,7 @@ const Button = styled('button', {
   variants: {
     color: {
       primary: {
-        backgroundColor: '$primary9',
+        backgroundColor: '#ce01a5',
         color: 'white',
         '&:hover': {
           backgroundColor: '$primary10',
@@ -62,7 +62,7 @@ const Button = styled('button', {
       },
       ghost1: {
         backgroundColor: 'transparent',
-        color: '$primary6', 
+        color: '$primary7', 
         p: 0,
         '&:hover': {
           color: '$primary9',
@@ -74,7 +74,7 @@ const Button = styled('button', {
         borderRadius: 0,
       },
       rounded: {
-        borderRadius: 8,
+        borderRadius: 4,
       },
       pill: {
         borderRadius: 99999,

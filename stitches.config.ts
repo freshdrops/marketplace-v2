@@ -18,7 +18,7 @@ import {
 import { createStitches } from '@stitches/react'
 import type * as Stitches from '@stitches/react'
 import { reset } from 'utils/css/reset'
-import { IBM_Plex_Mono, Inter, Roboto_Mono } from '@next/font/google'
+import { IBM_Plex_Mono, Inter, Roboto_Mono, } from '@next/font/google'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -26,13 +26,15 @@ const inter = Inter({
 
 const ibmplexmono = IBM_Plex_Mono({
   subsets: ['latin'],
-  weight: "400"
+  weight: "600"
 })
 
 const robotomono = Roboto_Mono({
   subsets: ['latin'],
   weight: '400'
 })
+
+
 
 // CONFIGURABLE: Here you can update all your theming (outside of ReservoirKit which can be configured in the app.tsx)
 // The theme colors are all already hooked up to stitches scales, so you just need to swap them.
@@ -129,7 +131,7 @@ export const { createTheme, keyframes, styled, globalCss, getCssText } =
       fontSizes: {},
       fontWeights: {},
       fonts: {
-        body: robotomono.style.fontFamily,
+        body: ibmplexmono.style.fontFamily,
         button: '$body',
       },
       lineHeights: {},

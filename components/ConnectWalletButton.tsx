@@ -24,11 +24,11 @@ export const ConnectWalletButton: FC<Props> = () => {
                     css={{ 
                       flex: 1, 
                       justifyContent: 'center',
-                      textShadow: '0px 0px 10px #ffb3cc' 
+                      textShadow: '0px 0px 5px #ffb3cc' 
                     }}
-                    corners="square"
+                    corners="rounded"
                     onClick={show}
-                    color="ghost1"
+                    color="primary"
                     type="button"
                   >
                     CONNECT WALLET
