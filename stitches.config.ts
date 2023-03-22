@@ -59,6 +59,7 @@ export const { createTheme, keyframes, styled, globalCss, getCssText } =
         //Aliases
 
         //Primary
+        // #CE01A5 is the pallete from freshdrops.io website.
         primary1: '#FAE6F6',
         primary2: '#F5CCED',
         primary3: '#EB99DB',
