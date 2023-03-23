@@ -68,6 +68,16 @@ const Button = styled('button', {
           color: '$primary9',
         },
       },
+      border1: {
+        backgroundColor: 'transparent',
+        border: 'solid',
+        borderColor: 'white',
+        color: '$primary7', 
+        p: 0,
+        '&:hover': {
+          color: '$primary9',
+        },
+      },
     },
     corners: {
       square: {

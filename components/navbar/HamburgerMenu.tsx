@@ -274,7 +274,7 @@ const HamburgerMenu = () => {
               css={{ justifyContent: 'center', width: '44px', height: '44px' }}
               type="button"
               size="small"
-              color="gray3"
+              color="ghost"
             >
               <FontAwesomeIcon icon={faTwitter} width={20} height={20} />
             </Button>
