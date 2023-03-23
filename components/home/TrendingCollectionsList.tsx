@@ -43,13 +43,31 @@ const TrendingCollectionsList: FC<Props> = ({
         {Array(2)
           .fill(null)
           .map((_, i) => (
-            <Flex justify="between" key={i}>
+            <Flex key={i}>
+              <Flex justify="start" css={{ width: '100%'}}>
+
               <Text style="subtitle3" color="subtle">
                 Collection
               </Text>
-              <Text style="subtitle3" color="subtle">
-                Volume
+              </Flex>
+              <Flex justify="end" css={{ justifySelf: 'flex-end'}} >
+                <Flex css={{ width: 64, mx: 10, justifyContent: 'flex-end'}}>
+                  <Text style="subtitle3" color="subtle" css={{  textAlign: 'end'}}>
+                    Floor 
+                  </Text>
+                </Flex>
+                <Flex css={{ width: 64, mx: 10, justifyContent: 'flex-end'}}>
+                  <Text style="subtitle3" color="subtle" css={{ textAlign: 'end'}}>
+                    Volume
+                  </Text>
+                </Flex>
+                <Flex css={{ width: 64, ml: 10, justifyContent: 'flex-end' }}>
+
+              <Text style="subtitle3" color="subtle" css={{ textAlign: 'end'}}>
+                Change
               </Text>
+                </Flex>
+              </Flex>
             </Flex>
           ))}
       </Box>

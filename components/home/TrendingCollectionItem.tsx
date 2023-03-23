@@ -24,12 +24,9 @@ export const TrendingCollectionItem: FC<Props> = ({
       style={{ display: 'inline-block', minWidth: 0 }}
     >
       <Flex align="center" css={{ cursor: 'pointer' }}>
-        <Text css={{ mr: '$4' }} style="subtitle3">
-          {rank}
-        </Text>
         <img
           src={collection?.image}
-          style={{ borderRadius: 8, width: 56, height: 56, objectFit: 'cover' }}
+          style={{ borderRadius: 999, width: 56, height: 56, objectFit: 'cover' }}
         />
         <Box css={{ ml: '$4', width: '100%', minWidth: 0 }}>
           <Flex align="center" css={{ gap: '$2', mb: 4, maxWidth: '80%' }}>
@@ -46,10 +43,10 @@ export const TrendingCollectionItem: FC<Props> = ({
               openseaVerificationStatus={collection?.openseaVerificationStatus}
             />
           </Flex>
-          <Flex align="center">
-            <Text css={{ mr: '$1', color: '$gray11' }} style="body2">
-              Floor
-            </Text>
+          
+        </Box>
+
+        <Flex align="center" css={{ mx: 10, width: 120, justifyContent: 'flex-end'}}>
             <FormatCryptoCurrency
               amount={collection?.floorAsk?.price?.amount?.decimal}
               address={collection?.floorAsk?.price?.currency?.contract}
@@ -59,16 +56,17 @@ export const TrendingCollectionItem: FC<Props> = ({
               textStyle="subtitle2"
             />
           </Flex>
-        </Box>
 
-        <Flex direction="column" align="end" css={{ gap: '$1' }}>
+        <Flex align="center" css={{ mx: 10, gap: '$1', width: 120, justifyContent: 'flex-end' }}>
           <FormatCryptoCurrency
             amount={collection?.volume?.[volumeKey]}
             maximumFractionDigits={1}
             logoHeight={16}
-            textStyle="subtitle1"
+            textStyle="subtitle2"
           />
-          {volumeKey !== 'allTime' && (
+        </Flex>
+        <Flex align="end" css={{ ml: 10, gap: '$1', width: 120, justifyContent: 'flex-end'}}>
+        {volumeKey !== 'allTime' && (
             <PercentChange
               value={collection?.volumeChange?.[volumeKey]}
               decimals={1}

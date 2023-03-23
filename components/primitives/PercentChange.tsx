@@ -18,10 +18,12 @@ export const PercentChange: FC<Props> = ({ value, decimals = 2, ...props }) => {
 
   return (
     <Text
-      style={props.style || 'subtitle3'}
+      style={props.style || 'subtitle2'}
       css={{
         color: isPositive ? '$green11' : '$red11',
         ml: '$1',
+        justifyContent: 'flex-end',
+        textAlign: 'end'
       }}
       {...props}
     >
