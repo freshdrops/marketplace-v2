@@ -232,8 +232,8 @@ const RankingsTableRow: FC<RankingsTableRowProps> = ({
                 src={image}
                 style={{
                   borderRadius: 8,
-                  width: 56,
-                  height: 56,
+                  width: 40,
+                  height: 40,
                   objectFit: 'cover',
                 }}
               />
