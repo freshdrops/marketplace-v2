@@ -82,11 +82,11 @@ const IndexPage: NextPage<Props> = ({ ssr }) => {
           p: 24,
           height: '100%',
           '@bp800': {
-            p: '$6',
+            p: '$5',
           },
         }}
       >
-        <Flex css={{ my: '$6', gap: 65 }} direction="column">
+        <Flex css={{ mb: '$6', gap: 20 }} direction="column">
           <Flex
             justify="between"
             align="start"

@@ -24,7 +24,7 @@ type Props = {
   volumeKey: '1day' | '7day' | '30day' | 'allTime'
 }
 
-const desktopTemplateColumns = '1.5fr 1.7fr repeat(5, 0.6fr)'
+const desktopTemplateColumns = '1.5fr 1.7fr repeat(6, 0.6fr)'
 
 export const CollectionRankingsTable: FC<Props> = ({
   collections,
@@ -241,18 +241,18 @@ const RankingsTableRow: FC<RankingsTableRowProps> = ({
           </Flex>
         </TableCell>
         <TableCell>
-          <Flex
-            direction="column"
-            align="start"
-            justify="start"
-            css={{ height: '100%' }}
-          >
             <FormatCryptoCurrency
-              amount={collection?.volume?.[volumeKey]}
+              amount={collection?.volume?.["1day"]}
               textStyle="subtitle2"
               logoHeight={14}
             />
-          </Flex>
+        </TableCell>
+        <TableCell>
+            <FormatCryptoCurrency
+              amount={collection?.volume?.["7day"]}
+              textStyle="subtitle2"
+              logoHeight={14}
+            />
         </TableCell>
         <TableCell>
             {volumeKey != 'allTime' && collection?.volumeChange && (
@@ -294,7 +294,7 @@ const RankingsTableRow: FC<RankingsTableRowProps> = ({
   }
 }
 
-const headings = ['Collection', '', 'Volume', '1D Change', '7D Change', 'Floor Price', 'Top Offer']
+const headings = ['Collection', '', '1D Volume', '7D Volume', '1D Change', '7D Change', 'Floor Price', 'Top Offer']
 
 const TableHeading = () => (
   <HeaderRow
