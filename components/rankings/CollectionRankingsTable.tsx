@@ -24,7 +24,7 @@ type Props = {
   volumeKey: '1day' | '7day' | '30day' | 'allTime'
 }
 
-const desktopTemplateColumns = '1.5fr 1.7fr repeat(3, 0.6fr)'
+const desktopTemplateColumns = '1.5fr 1.7fr repeat(5, 0.6fr)'
 
 export const CollectionRankingsTable: FC<Props> = ({
   collections,
@@ -172,9 +172,9 @@ const RankingsTableRow: FC<RankingsTableRowProps> = ({
         key={collection.id}
         css={{
           gridTemplateColumns: desktopTemplateColumns,
-        }}
+        }}        
       >
-        <TableCell css={{ minWidth: 0 }}>
+        <TableCell css={{ minWidth: 0, padding: 0 }}>
           <Link
             href={`/collection/${routePrefix}/${collection.id}`}
             style={{ display: 'inline-block', width: '100%', minWidth: 0 }}
@@ -196,8 +196,8 @@ const RankingsTableRow: FC<RankingsTableRowProps> = ({
                 src={collection?.image}
                 style={{
                   borderRadius: 999,
-                  width: 56,
-                  height: 56,
+                  width: 36,
+                  height: 36,
                   objectFit: 'cover',
                 }}
               />
@@ -206,7 +206,7 @@ const RankingsTableRow: FC<RankingsTableRowProps> = ({
                   display: 'inline-block',
                   minWidth: 0,
                 }}
-                style="subtitle1"
+                style="subtitle2"
                 ellipsify
               >
                 {collection?.name}
@@ -232,8 +232,8 @@ const RankingsTableRow: FC<RankingsTableRowProps> = ({
                 src={image}
                 style={{
                   borderRadius: 8,
-                  width: 40,
-                  height: 40,
+                  width: 36,
+                  height: 36,
                   objectFit: 'cover',
                 }}
               />
@@ -252,10 +252,17 @@ const RankingsTableRow: FC<RankingsTableRowProps> = ({
               textStyle="subtitle2"
               logoHeight={14}
             />
-            {volumeKey != 'allTime' && collection?.volumeChange && (
-              <PercentChange value={collection?.volumeChange[volumeKey]} />
-            )}
           </Flex>
+        </TableCell>
+        <TableCell>
+            {volumeKey != 'allTime' && collection?.volumeChange && (
+              <PercentChange value={collection?.volumeChange["1day"]} />
+            )}
+        </TableCell>
+        <TableCell>
+            {volumeKey != 'allTime' && collection?.volumeChange && (
+              <PercentChange value={collection?.volumeChange["7day"]} />
+            )}
         </TableCell>
         <TableCell>
           <Flex
@@ -269,9 +276,9 @@ const RankingsTableRow: FC<RankingsTableRowProps> = ({
               textStyle="subtitle2"
               logoHeight={14}
             />
-            {volumeKey != 'allTime' && collection?.floorSaleChange && (
+            {/*{volumeKey != 'allTime' && collection?.floorSaleChange && (
               <PercentChange value={collection?.floorSaleChange[volumeKey]} />
-            )}
+            )}*/}
           </Flex>
         </TableCell>
         <TableCell>
@@ -287,7 +294,7 @@ const RankingsTableRow: FC<RankingsTableRowProps> = ({
   }
 }
 
-const headings = ['Collection', '', 'Volume', 'Floor Price', 'Top Offer']
+const headings = ['Collection', '', 'Volume', '1D Change', '7D Change', 'Floor Price', 'Top Offer']
 
 const TableHeading = () => (
   <HeaderRow
