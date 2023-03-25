@@ -18,9 +18,9 @@ type Options =
   | 'Common to rare'
 
 const options: { [x: string]: { sortBy: string; sortDirection: string } } = {
+  'Rare to common': { sortBy: 'rarity', sortDirection: 'asc' },
   'Price low to high': { sortBy: 'floorAskPrice', sortDirection: 'asc' },
   'Price high to low': { sortBy: 'floorAskPrice', sortDirection: 'desc' },
-  'Rare to common': { sortBy: 'rarity', sortDirection: 'asc' },
   'Common to rare': { sortBy: 'rarity', sortDirection: 'desc' },
 }
 

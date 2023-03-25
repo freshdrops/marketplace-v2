@@ -216,16 +216,16 @@ const CollectionPage: NextPage<Props> = ({ id, ssr }) => {
                     {!isSmallDevice && (
                       <>
                         <Box>
-                          <Text style="body1" color="subtle">
+                          <Text style="subtitle2" color="subtle">
                             Creator Earnings
                           </Text>
-                          <Text style="body1"> {creatorRoyalties}%</Text>
+                          <Text style="subtitle2"> {creatorRoyalties}%</Text>
                         </Box>
                         <Box>
-                          <Text style="body1" color="subtle">
+                          <Text style="subtitle2" color="subtle">
                             Chain{' '}
                           </Text>
-                          <Text style="body1">{chain}</Text>
+                          <Text style="subtitle2">{chain}</Text>
                         </Box>
                       </>
                     )}
@@ -235,12 +235,12 @@ const CollectionPage: NextPage<Props> = ({ id, ssr }) => {
                     >
                       <Flex css={{ gap: '$2', width: 'max-content' }}>
                         {!isSmallDevice && (
-                          <Text style="body1" color="subtle">
+                          <Text style="subtitle2" color="subtle">
                             Collection
                           </Text>
                         )}
                         <Text
-                          style="body1"
+                          style="subtitle2"
                           color={isSmallDevice ? 'subtle' : undefined}
                           as="p"
                         >
@@ -264,16 +264,16 @@ const CollectionPage: NextPage<Props> = ({ id, ssr }) => {
           {isSmallDevice && (
             <Flex css={{ gap: 24, mb: 24 }}>
               <Box>
-                <Text style="body1" color="subtle">
+                <Text style="subtitle2" color="subtle">
                   Creator Earnings
                 </Text>
-                <Text style="body1"> {creatorRoyalties}%</Text>
+                <Text style="subtitle2"> {creatorRoyalties}%</Text>
               </Box>
               <Box>
-                <Text style="body1" color="subtle">
+                <Text style="subtitle2" color="subtle">
                   Chain{' '}
                 </Text>
-                <Text style="body1">{chain}</Text>
+                <Text style="subtitle2">{chain}</Text>
               </Box>
             </Flex>
           )}
@@ -359,10 +359,10 @@ const CollectionPage: NextPage<Props> = ({ id, ssr }) => {
                       gap: '$4',
                       pb: '$6',
                       gridTemplateColumns:
-                        'repeat(auto-fill, minmax(200px, 1fr))',
+                        'repeat(auto-fill, minmax(180px, 1fr))',
                       '@md': {
                         gridTemplateColumns:
-                          'repeat(auto-fill, minmax(240px, 1fr))',
+                          'repeat(auto-fill, minmax(180px, 1fr))',
                       },
                     }}
                   >
@@ -418,6 +418,7 @@ const CollectionPage: NextPage<Props> = ({ id, ssr }) => {
                         </>
                       )}
                   </Grid>
+                  
                   {tokens.length == 0 && !isFetchingPage && (
                     <Flex
                       direction="column"
@@ -432,6 +433,7 @@ const CollectionPage: NextPage<Props> = ({ id, ssr }) => {
                   )}
                 </Box>
               </Flex>
+              
             </TabsContent>
             <TabsContent value="activity">
               <Flex

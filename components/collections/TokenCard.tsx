@@ -57,8 +57,12 @@ export default ({
     <Box
       css={{
         borderRadius: 8,
+        width: 200,
+        height: 300,
         overflow: 'hidden',
-        background: '$neutralBgSubtle',
+        background: 'transparent',
+        border: 'solid 1px',
+        borderColor: '$gray8',
         $$shadowColor: '$colors$panelShadow',
         boxShadow: '0 8px 12px 0px $$shadowColor',
         position: 'relative',
