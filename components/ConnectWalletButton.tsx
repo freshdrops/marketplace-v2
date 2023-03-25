@@ -30,6 +30,7 @@ export const ConnectWalletButton: FC<Props> = () => {
                     onClick={show}
                     color="primary"
                     type="button"
+                    size="xs"
                   >
                     CONNECT WALLET
                   </Button>

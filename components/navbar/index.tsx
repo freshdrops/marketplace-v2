@@ -17,8 +17,8 @@ import { useAccount } from 'wagmi'
 import { ProfileDropdown } from './ProfileDropdown'
 import CartButton from './CartButton'
 
-export const NAVBAR_HEIGHT = 81
-export const NAVBAR_HEIGHT_MOBILE = 77
+export const NAVBAR_HEIGHT = 62
+export const NAVBAR_HEIGHT_MOBILE = 62
 
 const Navbar = () => {
   const { theme } = useTheme()
@@ -59,11 +59,11 @@ const Navbar = () => {
       <Box css={{ flex: 1 }}>
         <Flex align="center">
           <Link href="/">
-            <Box css={{ width: 112, cursor: 'pointer' }}>
+            <Box css={{ width: 92, cursor: 'pointer' }}>
               {theme == 'dark' ? (
                 <Image
                   src="/freshdrops-logo-pink.svg"
-                  width={112}
+                  width={92}
                   height={39}
                   alt="freshdrops"
                 />
@@ -107,7 +107,7 @@ const Navbar = () => {
       <Box css={{ flex: 1 }}>
         <Flex align="center">
           <Link href="/">
-            <Box css={{ width: 112, cursor: 'pointer' }}>
+            <Box css={{ width: 92, cursor: 'pointer' }}>
               {theme == 'dark' ? (
                 <Image
                   src="/freshdrops-logo-pink.svg"
@@ -136,11 +136,11 @@ const Navbar = () => {
           <Flex align="center" css={{ gap: '$5', mr: '$5' }}>
             <Link href="/collection-rankings">
               <NavItem active={router.pathname == '/collection-rankings'}>
-                Collections
+                COLLECTIONS
               </NavItem>
             </Link>
             <Link href="/portfolio">
-              <NavItem active={router.pathname == '/portfolio'}>Sell</NavItem>
+              <NavItem active={router.pathname == '/portfolio'}>SELL</NavItem>
             </Link>
           </Flex>
         </Flex>

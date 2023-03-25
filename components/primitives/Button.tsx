@@ -2,8 +2,8 @@ import { styled } from 'stitches.config'
 
 const Button = styled('button', {
   outline: 'none',
-  fontWeight: 700,
-  fontSize: 16,
+  fontWeight: 600,
+  fontSize: 14,
   whiteSpace: 'nowrap',
   fontFamily: '$button',
   transition: 'background-color 250ms linear',
@@ -97,7 +97,8 @@ const Button = styled('button', {
     },
     size: {
       xs: {
-        p: '$space$3',
+        px: '$space$5',
+        py: '$space$3',
         lineHeight: '16px',
         minHeight: 40,
       },

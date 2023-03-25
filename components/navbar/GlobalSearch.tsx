@@ -199,7 +199,7 @@ const GlobalSearch = forwardRef<
       onClick={(e) => {
         e.stopPropagation()
       }}
-      css={{ position: 'relative', width: '100%' }}
+      css={{ position: 'relative', width: '100%', }}
       onFocus={() => setShowSearchBox(true)}
     >
       {!isMobile && (

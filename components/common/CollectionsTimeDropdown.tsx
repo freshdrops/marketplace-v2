@@ -26,11 +26,11 @@ const nameForSortingOption = (
 ) => {
   switch (option) {
     case '1DayVolume':
-      return compact ? '24h' : '24 hours'
+      return compact ? '24h' : 'Trending'
     case '7DayVolume':
-      return compact ? '7d' : '7 days'
+      return compact ? '7d' : '1wTrending'
     case '30DayVolume':
-      return compact ? '30d' : '30 days'
+      return compact ? '30d' : 'Top'
     case 'allTimeVolume':
       return compact ? 'All' : 'All Time'
   }
