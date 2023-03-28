@@ -366,7 +366,7 @@ const CollectionPage: NextPage<Props> = ({ id, ssr }) => {
                     </Flex>
                   </Flex>
                   {!isSmallDevice && <SelectedAttributes />}
-                  {/*<Grid
+                  <Grid
                     css={{
                       gap: '$4',
                       pb: '$6',
@@ -429,7 +429,7 @@ const CollectionPage: NextPage<Props> = ({ id, ssr }) => {
                             ))}
                         </>
                       )}
-                    </Grid>*/}
+                    </Grid>
                   {tokens.length == 0 && !isFetchingPage && (
                     <Flex
                       direction="column"
