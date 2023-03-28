@@ -259,7 +259,8 @@ const CollectionPage: NextPage<Props> = ({ id, ssr }) => {
                 </Box>
               </Flex>
             </Flex>
-            <CollectionActions collection={collection} />
+            {/*<CollectionActions collection={collection} />*/}
+            <StatHeader collection={collection} />
           </Flex>
           {isSmallDevice && (
             <Flex css={{ gap: 24, mb: 24 }}>
@@ -277,7 +278,8 @@ const CollectionPage: NextPage<Props> = ({ id, ssr }) => {
               </Box>
             </Flex>
           )}
-          <StatHeader collection={collection} />
+          {/*<StatHeader collection={collection} />*/}
+
           <Tabs.Root
             defaultValue="items"
             onValueChange={(value) => {
@@ -288,11 +290,12 @@ const CollectionPage: NextPage<Props> = ({ id, ssr }) => {
               }
             }}
           >
-            <TabsList>
+
+            {/*<TabsList>
               <TabsTrigger value="items">Items</TabsTrigger>
               <TabsTrigger value="activity">Activity</TabsTrigger>
-            </TabsList>
-
+            </TabsList>*/}
+            <br></br>
             <TabsContent value="items">
               <Flex
                 css={{
@@ -307,12 +310,21 @@ const CollectionPage: NextPage<Props> = ({ id, ssr }) => {
                     scrollToTop={scrollToTop}
                   />
                 ) : (
+                  <div>
                   <AttributeFilters
                     attributes={attributes}
                     open={attributeFiltersOpen}
                     setOpen={setAttributeFiltersOpen}
                     scrollToTop={scrollToTop}
                   />
+                  {/*<ActivityFilters
+                    open={activityFiltersOpen}
+                    setOpen={setActivityFiltersOpen}
+                    activityTypes={activityTypes}
+                    setActivityTypes={setActivityTypes}
+                  />*/}
+                  
+                  </div>
                 )}
                 <Box
                   css={{
@@ -354,7 +366,7 @@ const CollectionPage: NextPage<Props> = ({ id, ssr }) => {
                     </Flex>
                   </Flex>
                   {!isSmallDevice && <SelectedAttributes />}
-                  <Grid
+                  {/*<Grid
                     css={{
                       gap: '$4',
                       pb: '$6',
@@ -417,8 +429,7 @@ const CollectionPage: NextPage<Props> = ({ id, ssr }) => {
                             ))}
                         </>
                       )}
-                  </Grid>
-                  
+                    </Grid>*/}
                   {tokens.length == 0 && !isFetchingPage && (
                     <Flex
                       direction="column"
@@ -432,48 +443,14 @@ const CollectionPage: NextPage<Props> = ({ id, ssr }) => {
                     </Flex>
                   )}
                 </Box>
-              </Flex>
-              
-            </TabsContent>
-            <TabsContent value="activity">
-              <Flex
-                css={{
-                  gap: activityFiltersOpen ? '$5' : '',
-                  position: 'relative',
-                }}
-              >
-                {isSmallDevice ? (
-                  <MobileActivityFilters
-                    activityTypes={activityTypes}
-                    setActivityTypes={setActivityTypes}
-                  />
-                ) : (
-                  <ActivityFilters
-                    open={activityFiltersOpen}
-                    setOpen={setActivityFiltersOpen}
-                    activityTypes={activityTypes}
-                    setActivityTypes={setActivityTypes}
-                  />
-                )}
-                <Box
-                  css={{
-                    flex: 1,
-                    gap: '$4',
-                    pb: '$5',
-                  }}
-                >
-                  {!isSmallDevice && (
-                    <FilterButton
-                      open={activityFiltersOpen}
-                      setOpen={setActivityFiltersOpen}
-                    />
-                  )}
+                <Flex css={{width: 350, overflow: 'scroll'}}>
                   <CollectionActivityTable
                     id={id}
                     activityTypes={activityTypes}
                   />
-                </Box>
+                </Flex>
               </Flex>
+              
             </TabsContent>
           </Tabs.Root>
         </Flex>

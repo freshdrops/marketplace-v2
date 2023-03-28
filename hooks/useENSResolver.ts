@@ -31,9 +31,7 @@ export default (address?: string, chainId: number = 1) => {
 
   if (isAccountAddress) {
     displayName = 'You'
-  } else if (response.data?.name) {
-    displayName = shortName || ''
-  } else if (address) {
+  }  else if (address) {
     displayName = shortAddress
   }
 

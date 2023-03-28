@@ -20,6 +20,27 @@ import CollectionsTimeDropdown, {
 import { Head } from 'components/Head'
 import { CollectionRankingsTable } from 'components/rankings/CollectionRankingsTable'
 
+
+// All-seeing instrument, supreme perception
+// Omnifocal accumulator
+// Thief of integrity, its gaze upon the blind
+// Information divinity by man designed
+
+// The lives of all they occupy, their eyes in dismal gloom
+// The all-piercing, dead oculi, mirrors of our doom
+// Oblivious to the trespass as you gaze into the black
+// The demon of surveillance insultingly staring back
+// Into you
+// Into you
+
+// They own your every secret, your life is in their files
+// The grains of your every waking second sifted through and scrutinized
+// They know your every right, they know your every wrong
+// Each put in their due compartment, sins where sins belong
+
+// - Meshuggah, The Demon's Name Is Surveillance
+
+
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 const IndexPage: NextPage<Props> = ({ ssr }) => {
