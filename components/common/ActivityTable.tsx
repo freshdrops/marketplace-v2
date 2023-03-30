@@ -339,14 +339,13 @@ const ActivityTableRow: FC<ActivityTableRowProps> = ({ activity }) => {
   return (
     <TableRow
       key={activity.txHash}
-      css={{ gridTemplateColumns: '.2fr .9fr 1fr 1fr 1fr 1fr', }}
+      css={{ gridTemplateColumns: '.2fr .9fr 1fr 1fr 1fr 1fr', py: 0}}
     >
       {/*<TableCell css={{ color: '$gray11' }}>
         <Flex align="center">
           {activity.type && logos[activity.type]}
         </Flex>
-  </TableCell>*/}
-
+        </TableCell>*/}
       <TableCell css={{ minWidth: 40}}>
         <Link href={href} passHref>
           <Flex align="center">
